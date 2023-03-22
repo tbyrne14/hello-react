@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with Tyler
+          Learn React with Tyler and MSU!
         </a>
       </header>
     </div>
