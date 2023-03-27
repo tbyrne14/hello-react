@@ -28,14 +28,14 @@ function Bookshelf() {
   )
 }
 
-function MagicButton() {
+/*function MagicButton() {
   return (
     <div>
     <h3>This is a magic button</h3>
     <button>Magic</button>
     </div>
   );
-}
+} */
 
 function App() {
   return (
