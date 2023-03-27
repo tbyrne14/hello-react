@@ -23,8 +23,8 @@ function App() {
         >
           Learn React with Tyler and MSU!
         </a>
+        <MagicButton />
       </header>
-      <MagicButton />
     </div>
   );
 }
