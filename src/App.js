@@ -12,7 +12,7 @@ function ZineRack() {
     <li
       key={zine.id}
       style={{
-        color: zine.isAvailable ? 'red' : 'green'
+        color: zine.isAvailable ? 'green' : 'red'
       }}
       >
         {zine.title}
