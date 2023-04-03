@@ -13,7 +13,7 @@ function Library() {
   }    
   getBooks();
   return (
-    <table>
+    <table className="tableEdit">
     {
       myBooks.map(b => (
         <tr>

@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.tableEdit {
+  font-size: smaller;
+  padding: 5ch;
+  margin: 5ch;
+  border-top: solid 4px white;
+  border-bottom: solid 4px white;
+  border-left: solid 4px white;
+  border-right: solid 4px white;
+  border-radius: 8px;
+}
