@@ -25,7 +25,7 @@ function Library() {
       ))
     }  
     </table>
-  );
+  )
 }
 
 const magazines = [
