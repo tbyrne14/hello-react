@@ -1,5 +1,32 @@
+import { useState } from 'react';
+import { supabase } from './supabaseClient';
 /* import logo from './logo.svg'; */
 import './App.css'; 
+
+function Library() {
+  const [myBooks, setMyBooks] = useState([]);
+  async function getBooks() {  
+    let { data: books, error } = await supabase
+      .from('books')
+      .select('*')
+    setMyBooks(books);  
+  }    
+  getBooks();
+  return (
+    <table>
+    {
+      myBooks.map(b => (
+        <tr>
+          <td>{b.title}</td>
+          <td>{b.author}</td>
+          <td>{b.isbn}</td>
+          <td>{b.description}</td>
+        </tr>
+      ))
+    }  
+    </table>
+  );
+}
 
 const magazines = [
   { id: 1, title: 'Architectural Digest', theme: 'architecture', isAvailable: true},
@@ -51,10 +78,14 @@ function Bookshelf() {
 }
 
 function MagicButton() {
+  const [count, setCount] = useState(0);
+  function doMagic() {
+    setCount(count + 1);
+  }
   return (
     <div>
     <h3>This is a magic button</h3>
-    <button>Magic</button>
+    <button onClick={doMagic}>Magic {count}</button>
     </div>
   );
 } 
@@ -63,9 +94,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ZineRack/>
-        <Bookshelf/>
-        <MagicButton/>
+        <Library />
+        <ZineRack />
+        <Bookshelf />
+        <MagicButton />
       </header>
     </div>
   );
